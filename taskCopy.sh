@@ -4,14 +4,14 @@ sudo docker network rm hadoop
 
 sudo docker network create --driver=bridge hadoop
 
+sudo docker rm -f learn-hadoop
 
-docker rm -f learn-hadoop
+sudo docker build -t learn-hadoop .
 
-docker build -t learn-hadoop .
-
-# start hadoop master container
 sudo docker rm -f hadoop-master &> /dev/null
+
 echo "start hadoop-master container..."
+
 sudo docker run -itd \
                 --net=hadoop \
                 -p 50070:50070 \
@@ -35,5 +35,10 @@ for i in {1..4}
         i=$(( $i + 1 ))
     done
 
+echo "Started Hadoop Cluster"
+echo "Docker Nodes "
+
+docker ps
+
 # get into hadoop master container
-sudo docker exec -it hadoop-master bash /tasks.sh
+sudo docker exec -it hadoop-master bash
