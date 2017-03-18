@@ -25,5 +25,10 @@ NOTE: You will be prompted for your password as there are sudo commands inside t
 
 *REFERENCES*:
 [1] https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html
+(used the WordCount example provided here)
+
 [2] https://hub.docker.com/r/sequenceiq/hadoop-docker/
+(Used this base image in our DockerFile)
+
 [3] https://github.com/kiwenlau/hadoop-cluster-docker
+(Used to understand how to set up Hadoop Cluster in Docker & make nodes interact over network)
