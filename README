@@ -1,0 +1,29 @@
+CSE 291 Project 3
+
+Anthony Altieri - aaltieri@ucsd.edu - PID: A12463877
+Bharat Batra - bbatra@ucsd.edu - PID: A10807106
+
+There a 3 tasks run in this project:
+
+1. We create a Hadoop Cluster using the Docker Console that
+consists of 1 master node and 4 clients.
+
+2. We run the word count example provided at *[1]*. This is present in WordCount.java
+
+3. We run a modified word count to find number of bigrams in the input files. This is present in BigramCount.java
+
+For tasks 2 & 3, we use the files file01 & file02 under the directory io in this project
+Tasks 2 & 3 are run using a shell script (tasks.sh) inside of the master container
+
+The entire process is automated, and to run all 3 tasks all you need to do is run the shell script runtasks.sh
+
+In other words, in your console type :
+
+    runtasks.sh
+
+NOTE: You will be prompted for your password as there are sudo commands inside this script - please oblige
+
+*REFERENCES*:
+[1] https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html
+[2] https://hub.docker.com/r/sequenceiq/hadoop-docker/
+[3] https://github.com/kiwenlau/hadoop-cluster-docker
